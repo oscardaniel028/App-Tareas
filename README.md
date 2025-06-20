@@ -1,59 +1,66 @@
-# AppTareas
+# 📝 App de Tareas en Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+Aplicación web desarrollada en **Angular** para gestión de tareas, con diseño moderno y persistencia de datos en el navegador. Implementa buenas prácticas como componentes standalone, servicios dedicados e interfaces tipadas.
 
-## Development server
+![Captura de pantalla de la App de Tareas](../app.jpg)
 
-To start a local development server, run:
+## 🚀 Características principales
+
+- ➕ Crear nuevas tareas con validación
+- ✅ Toggle para marcar/desmarcar completadas
+- 🗑️ Eliminar tareas
+- 🔄 Persistencia automática en `localStorage`
+- ✨ Animaciones CSS para transiciones
+
+
+## 🛠 Tecnologías utilizadas
+
+| Tecnología | Uso |
+|------------|-----|
+| ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) | Framework principal |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | Lenguaje base |
+| ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) | Estilos y layout |
+| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white) | Íconos visuales |
+
+## ⚙️ Requisitos previos
+
+- Node.js v16+
+- npm v8+ o yarn
+- Angular CLI
+
+## 🛠 Instalación
 
 ```bash
+# 1. Clonar repositorio
+git clone https://github.com/oscardaniel028/App-Tareas
+
+# 2. Entrar al directorio
+cd App-Tareas
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Iniciar servidor de desarrollo
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# 5. Abrir en navegador
+http://localhost:4200/
 
-## Code scaffolding
+📁 Estructura del proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+src/
+└── app/
+    ├── components/
+    │   └── tareas/
+    │       ├── tareas.component.ts
+    │       ├── tareas.component.html
+    │       ├── tareas.component.css
+    ├── interfaces/
+    │   └── tarea.interface.ts
+    ├── servicios/
+    │   └── tareas.service.ts
 
-```bash
-ng generate component component-name
-```
+📄 Licencia
+Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y compartirlo libremente.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
