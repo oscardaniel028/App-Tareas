@@ -1,0 +1,70 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 bg-dark text-white">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4 text-info fw-bold">Mis Tareas</h3>
+
+          <!-- Input y botón -->
+          <div class="input-group mb-4">
+            <input
+              class="form-control form-control-lg bg-secondary text-white border-0"
+              type="text"
+              [(ngModel)]="nombreTarea"
+              (keyup.enter)="guardarTarea()"
+              placeholder="Escribe una tarea..."
+            />
+            <button class="btn btn-info" (click)="guardarTarea()">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+
+          <!-- Lista vacía -->
+          <div *ngIf="listaTarea.length === 0" class="text-center  text-light">
+            <p>NO TIENES TAREAS PENDIENTES</p>
+          </div>
+
+          <!-- Lista de tareas -->
+          <ul class="list-group">
+            <li
+              *ngFor="let t of listaTarea; let i = index"
+              class="list-group-item d-flex justify-content-between align-items-center bg-secondary text-white border-0 mb-2 rounded"
+              [ngClass]="{ 'opacity-50': t.tarea }"
+            >
+              <div class="d-flex align-items-center">
+                <span
+                  class="me-3"
+                  (click)="actualizarTarea(i)"
+                  title="Completar tarea"
+                >
+                  <i
+                    [ngClass]="
+                      t.tarea
+                        ? 'fa-solid fa-circle-check text-success'
+                        : 'fa-regular fa-circle text-white'
+                    "
+                    style="font-size: 1.2rem"
+                  ></i>
+                </span>
+                <span
+                  [ngClass]="{
+                    'text-decoration-line-through text-muted': t.tarea
+                  }"
+                >
+                  {{ t.nombre }}
+                </span>
+              </div>
+              <span
+                class="text-danger"
+                (click)="eliminarTarea(i)"
+                title="Eliminar tarea"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
