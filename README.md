@@ -2,8 +2,6 @@
 
 Aplicación web desarrollada en **Angular** para gestión de tareas, con diseño moderno y persistencia de datos en el navegador. Implementa buenas prácticas como componentes standalone, servicios dedicados e interfaces tipadas.
 
-![Captura de pantalla de la App de Tareas](../app.jpg)
-
 ## 🚀 Características principales
 
 - ➕ Crear nuevas tareas con validación
